@@ -1,0 +1,7 @@
+# Created by .ignore support plugin (hsz.mobi)
+node_modules/
+### VisualStudioCode template
+.vscode/
+### JetBrains
+.idea
+.rpt2_cache

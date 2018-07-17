@@ -1,0 +1,19 @@
+@import "./arcs.theme-builder";
+.jq-arcs{
+    $BR-arc__back:#000;
+    $BR-arc__odd:rgb(33, 150, 243);
+    $BR-arc__even:rgb(33, 150, 243);
+    $BR-arc__mid:#fff;
+    $BC-arc__item--odd:#020c7d;
+    $BC-arc__item--even:#020c7d;
+    $TC-arc__item:#fff;
+    @include jq-arcs-theme(
+        $BR-arc__back,
+        $BR-arc__odd,
+        $BR-arc__even,
+        $BR-arc__mid,
+        $BC-arc__item--odd,
+        $BC-arc__item--even,
+        $TC-arc__item
+    );
+}

@@ -1,0 +1,33 @@
+.jq-arcs .jq-arcs__arc.jq-arcs__arc-back {
+  stroke: #000;
+}
+
+.jq-arcs .jq-arcs__arc.jq-arcs__arc-mid {
+  stroke: #fff;
+}
+
+.jq-arcs .jq-arcs__group .jq-arcs__arc.jq-arcs__arc-fill {
+  stroke: #2196f3;
+}
+
+.jq-arcs .jq-arcs__group:nth-child(even) .jq-arcs__arc.jq-arcs__arc-fill {
+  stroke: #2196f3;
+}
+
+.jq-arcs .jq-arcs__item {
+  background-color: #020c7d;
+}
+
+.jq-arcs .jq-arcs__item:nth-child(even) {
+  background-color: #020c7d;
+}
+
+.jq-arcs .jq-arcs__item > *:not(.jq-arcs__item--ignore-content),
+.jq-arcs .jq-arcs__item .jq-arcs__content {
+  color: #fff;
+}
+
+.jq-arcs:after {
+  border-color: #000;
+  background-color: #fff;
+}

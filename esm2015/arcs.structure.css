@@ -1,0 +1,72 @@
+.jq-arcs {
+  position: relative;
+}
+
+@keyframes jq-arcs-pulse {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.jq-arcs .jq-arcs__group.jq-arcs--current:not(.jq-arcs--animating) {
+  cursor: pointer;
+  animation-name: jq-arcs-pulse;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-delay: 250ms;
+  transform-origin: center;
+}
+
+.jq-arcs .jq-arcs__item {
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  height: 41.5%;
+  width: 41.5%;
+  top: 50%;
+  left: 50%;
+  margin-left: -21%;
+  margin-top: -21%;
+  z-index: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: opacity 800ms linear;
+}
+
+.jq-arcs .jq-arcs__item > *:not(.jq-arcs__item--ignore-content),
+.jq-arcs .jq-arcs__item .jq-arcs__content {
+  padding: 1em;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1em;
+}
+
+.jq-arcs .jq-arcs__item.jq-arcs__item.jq-arcs--activating {
+  opacity: 1;
+}
+
+.jq-arcs .jq-arcs__item.jq-arcs__item.jq-arcs--activated {
+  opacity: 1;
+}
+
+.jq-arcs:after {
+  content: "";
+  height: 43%;
+  width: 43%;
+  position: absolute;
+  border: 2px solid;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  margin-top: -22%;
+  margin-left: -22%;
+}

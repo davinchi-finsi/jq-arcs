@@ -1,0 +1,33 @@
+@mixin jq-arcs-theme($BR-arc__back,$BR-arc__odd,$BR-arc__even,$BR-arc__mid,$BC-arc__item--odd,$BC-arc__item--even,$TC-arc__item){
+    .jq-arcs__arc.jq-arcs__arc-back{
+        stroke:$BR-arc__back;
+    }
+    .jq-arcs__arc.jq-arcs__arc-mid{
+        stroke:$BR-arc__mid;
+    }
+
+    .jq-arcs__group{
+        .jq-arcs__arc.jq-arcs__arc-fill{
+            stroke:$BR-arc__odd;
+        }
+        &:nth-child(even){
+            .jq-arcs__arc.jq-arcs__arc-fill{
+                stroke:$BR-arc__even;
+            }
+        }
+    }
+    .jq-arcs__item{
+        background-color: $BC-arc__item--odd;
+        &:nth-child(even){
+            background-color: $BC-arc__item--even;
+        }
+        &>*:not(.jq-arcs__item--ignore-content),
+        .jq-arcs__content{
+            color: $TC-arc__item;
+        }
+    }
+    &:after {
+        border-color:$BR-arc__back;
+        background-color: $BR-arc__mid;
+    }
+}
